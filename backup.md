@@ -11,7 +11,8 @@ pip install requests
 Additionally, you need a Personal Access Token (Classic) from GitHub with the gist scope. 
 You can create this in your GitHub settings under Developer Settings > Personal Access Tokens.
 
-The resulting folder structureAfter running the script, the script organizes your gists neatly sorted. Each gist gets its own media folder:
+The resulting folder structure: 
+After running the script, the script organizes your gists neatly sorted. Each gist gets its own media folder:
 ```
 my_gists_backup/
 ├── Project-Notes_a1b2c3d4e5f6.../
