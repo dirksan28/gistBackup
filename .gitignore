@@ -11,6 +11,7 @@
 *.sln.docstates
 *.env
 config.py
+my_gists_backup/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
