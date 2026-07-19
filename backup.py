@@ -3,11 +3,7 @@ import re
 import requests
 import subprocess
 
-# --- KONFIGURATION ---
-GITHUB_USERNAME = "IHR_GITHUB_BENUTZERNAME"
-GITHUB_TOKEN = "IHR_GITHUB_PERSONAL_ACCESS_TOKEN"
-BACKUP_DIR = "./my_gists_backup"
-# ----------------------
+from config import GITHUB_USERNAME, GITHUB_TOKEN, BACKUP_DIR
 
 # GitHub API URL für die Gists des Nutzers
 API_URL = f"https://api.github.com/users/{GITHUB_USERNAME}/gists"
