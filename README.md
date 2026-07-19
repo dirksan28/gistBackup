@@ -36,7 +36,7 @@ my_gists_backup/
 ```
 
 ## HowTo Generate Gist Access Token
-You create a “Personal Access Token (classic)” with the `gist` scope from your **account settings**, not from an individual repository.
+You create a “Personal Access Token (classic)” with the gist scope from your account settings, not from an individual repository, by navigating to Developer settings → Personal access tokens → Tokens (classic) and generating a new token with only the gist scope enabled.
 
 ## Step‑by‑step: create a classic PAT with `gist` scope
 
