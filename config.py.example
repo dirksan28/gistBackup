@@ -1,4 +1,4 @@
-mport os
+import os
 
 # example config for the backup-script für das Backup-Skript
 # adapt to your needs - then rename or copy this file to config.py
