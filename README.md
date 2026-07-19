@@ -7,21 +7,10 @@ The script completes all three steps to get your gists into your local filesyste
 - It scans each gist for embedded GitHub image links.
 - It downloads the images, stores them locally in the respective gist folder, and rewrites the Markdown links to the local paths.
 
-## Config
-### Requirements:
-```
-pip install requests
-```
+### The resulting folder structure: 
+After running `backup.py`, the script organizes your gists neatly sorted. Each gist gets its own media folder:
 
-### GIT Gist Credentials
-Additionally, you need a Personal Access Token (Classic) from GitHub with the gist scope. 
-You can create this in your GitHub settings under Developer Settings > Personal Access Tokens.
-
->[!IMPORTANT]
->Please copy cofig.py.example to config.py and fill in your GITHUB-Gist-Token and Username.
-
-## The resulting folder structure: 
-After running the script, the script organizes your gists neatly sorted. Each gist gets its own media folder:
+Example:
 ```
 my_gists_backup/
 ├── Project-Notes_a1b2c3d4e5f6.../
@@ -35,6 +24,22 @@ my_gists_backup/
         └── diagram.jpg
 ```
 
+## Config
+### Requirements:
+```
+pip install requests
+```
+
+### GIT Gist Credentials
+Additionally, you need a Personal Access Token (Classic) from GitHub with the gist scope. 
+You can create this in your GitHub settings under Developer Settings > Personal Access Tokens. See [HowTo Generate Gist Access Token](#howto-generate-gist-access-token) for more details.
+
+>[!IMPORTANT]
+> Please copy `./config.py.example` to `config.py` and enter your GitHub Gist token and username.
+
+---
+
+# Resources
 ## HowTo Generate Gist Access Token
 You create a “Personal Access Token (classic)” with the gist scope from your account settings, not from an individual repository, by navigating to Developer settings → Personal access tokens → Tokens (classic) and generating a new token with only the gist scope enabled.
 
