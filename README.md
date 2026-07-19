@@ -17,7 +17,7 @@ pip install requests
 Additionally, you need a Personal Access Token (Classic) from GitHub with the gist scope. 
 You can create this in your GitHub settings under Developer Settings > Personal Access Tokens.
 
->![INFO]
+>[!IMPORTANT]
 >Please copy cofig.py.example to config.py and fill in your GITHUB-Gist-Token and Username.
 
 ## The resulting folder structure: 
