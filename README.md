@@ -1,4 +1,5 @@
-# gistBackup – Local, Fully Renderable Backups of Your GitHub Gists
+# gistBackup
+Local, Fully Renderable Backups of Your GitHub Gists
 
 ## Purpose
 GitHub Gists are great for sharing snippets, notes, and small projects — but they rely on GitHub’s availability, and any externally linked images or media can disappear over time. gistBackup ensures your Gists remain fully accessible by creating complete local copies, including all files and downloaded media, with rewritten URLs so everything renders correctly offline.
@@ -15,7 +16,7 @@ If desired, the backed‑up Gists can be **used as normal Git repositories**, ma
 
 ---
 
-### Features
+## Features
 
 - **Backup of your GitHub Gists** via the GitHub API  
 - **Local folder structure** mirroring each Gist  
@@ -26,7 +27,7 @@ If desired, the backed‑up Gists can be **used as normal Git repositories**, ma
 
 ---
 
-### Configuration
+## Configuration
 
 Configuration is limited to three core options:
 
@@ -36,7 +37,7 @@ Configuration is limited to three core options:
 
 You can configure these either via `config.py` or environment variables.
 
-#### 1. Using `config.py`
+### 1. Using `config.py`
 
 A template file `config.py.example` is provided.
 
@@ -50,7 +51,7 @@ Then edit `config.py` and set:
 - your GitHub Personal Access Token,  
 - your desired backup directory.
 
-#### 2. Using environment variables
+### 2. Using environment variables
 
 You can also configure the script via environment variables, for example:
 
@@ -64,12 +65,10 @@ python backup.py
 
 This is convenient for shells, scripts, or CI pipelines.
 
----
-
 #### GIT Gist Credentials
 You need a Personal Access Token (Classic) from GitHub with the gist scope to give the script access to your gists. You can create this in your GitHub settings under Developer Settings > Personal Access Tokens. See [HowTo Generate Gist Access Token](#howto-generate-gist-access-token) for more details.
 
-### How it works
+## How it works
 1. The script reads configuration from environment variables and/or `config.py`.  
 2. It connects to the GitHub API using your username and token.  
 3. All Gists for that user are fetched and stored in the backup directory.  
@@ -78,9 +77,7 @@ You need a Personal Access Token (Classic) from GitHub with the gist scope to gi
    - URLs are rewritten to point to the local copies.  
 5. The result is a **self‑contained, locally renderable backup** of each Gist, which can also be managed as a normal Git repository if you choose.
 
----
-
-### How to run the script
+## How to run the script
 
 **Example using environment variables:**
 
@@ -98,9 +95,7 @@ python backup.py
 python backup.py
 ```
 
----
-
-### Example backup structure
+## Example backup structure
 
 ```
 my_gists_backup/
@@ -119,8 +114,8 @@ All Markdown files reference the downloaded media, so they render correctly with
 
 ---
 
-# Resources
-## HowTo Generate Gist Access Token
+## Resources
+### HowTo Generate Gist Access Token
 You create a “Personal Access Token (classic)” with the gist scope from your account settings, not from an individual repository, by navigating to Developer settings → Personal access tokens → Tokens (classic) and generating a new token with only the gist scope enabled.
 
 ## Step‑by‑step: create a classic PAT with `gist` scope
