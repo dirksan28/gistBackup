@@ -65,17 +65,54 @@ python backup.py
 
 This is convenient for shells, scripts, or CI pipelines.
 
-#### GIT Gist Credentials
+### GIT Gist Credentials
 You need a Personal Access Token (Classic) from GitHub with the gist scope to give the script access to your gists. You can create this in your GitHub settings under Developer Settings > Personal Access Tokens. See [HowTo Generate Gist Access Token](#howto-generate-gist-access-token) for more details.
 
-## How it works
-1. The script reads configuration from environment variables and/or `config.py`.  
-2. It connects to the GitHub API using your username and token.  
-3. All Gists for that user are fetched and stored in the backup directory.  
-4. Markdown files are scanned for linked media:
-   - media files are downloaded,
-   - URLs are rewritten to point to the local copies.  
-5. The result is a **self‑contained, locally renderable backup** of each Gist, which can also be managed as a normal Git repository if you choose.
+## Installation & Dependencies
+
+This script requires the external **`requests`** library to communicate with the GitHub API and download media files. You can install it within an isolated virtual environment (recommended) or directly into your local environment.
+
+### Option 1: Using a Virtual Environment (Recommended)
+
+To avoid modifying your global Python environment, use a virtual environment (`venv`):
+
+**Quick Setup (Linux / macOS)**
+
+If you are on a Unix-based system, you can use the provided setup script to automatically create the virtual environment and install all dependencies. 
+To ensure the environment stays activated in your current terminal session, run it using `source`:
+
+```bash
+source setup_venv.sh
+python backup.py
+```
+
+**Alternatively, create the venv manually:**
+```bash
+# 1. Create and activate venv
+python3 -m venv venv
+source venv/bin/activate
+
+# 2. Install dependency
+pip install requests
+```
+
+**On Windows (PowerShell):**
+```powershell
+# 1. Create and activate venv
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+
+# 2. Install dependency
+pip install requests
+```
+
+### Option 2: Direct Local Installation
+
+If you prefer to install the package globally or locally without a virtual environment:
+
+```bash
+pip install --user requests
+```
 
 ## How to run the script
 
