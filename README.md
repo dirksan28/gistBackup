@@ -1,5 +1,5 @@
 # gistBackup
-Local, Fully Renderable Backups of Your GitHub Gists
+Local, Fully Renderable Backups of Your GitHub Gists including linked pictures.
 
 ## Purpose
 GitHub Gists are great for sharing snippets, notes, and small projects — but they rely on GitHub’s availability, and any externally linked images or media can disappear over time. gistBackup ensures your Gists remain fully accessible by creating complete local copies, including all files and downloaded media, with rewritten URLs so everything renders correctly offline.
